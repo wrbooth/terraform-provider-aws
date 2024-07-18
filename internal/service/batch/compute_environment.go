@@ -72,7 +72,6 @@ func ResourceComputeEnvironment() *schema.Resource {
 			"compute_resources": {
 				Type:     schema.TypeList,
 				Optional: true,
-				ForceNew: true,
 				MinItems: 0,
 				MaxItems: 1,
 				Elem: &schema.Resource{
@@ -137,7 +136,6 @@ func ResourceComputeEnvironment() *schema.Resource {
 						names.AttrLaunchTemplate: {
 							Type:     schema.TypeList,
 							Optional: true,
-							ForceNew: true,
 							MaxItems: 1,
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
